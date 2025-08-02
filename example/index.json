@@ -1,0 +1,60 @@
+{
+	"config": {
+	},
+	"authors": [
+		{
+			"archive": { // Info that will be displayed and used in profile cards
+				"display": "Chip",
+				"username": "chiptumor",
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
+			},
+			"available": true,
+			"current": { // Info that will be used in profile cards
+				"display": "Chip",
+				"username": "chiptumor",
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-current.png"
+			}
+		},
+		{
+			"archive": {
+				"display": "Mouse",
+				"username": "2o29__",
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/mouse-archive.png"
+			},
+			"available": false,
+			"current": {
+				"display": "Mouse",
+				"username": "2o29__",
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/mouse-current.png"
+			}
+		}
+	],
+	"messages": [
+		{
+			"author": 0, // Author "Chip"
+			"date": "", // Date time string format for date object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
+			"rewritten": // Rewritten version of original message
+				"Hi, How are you doing?",
+			"original": // Text that appears when you hover over it
+				"hi hyd"
+		},
+		{
+			"author": "date", // Displayed as date stamp
+			"type": ""
+		},
+		{
+			"author": 1, // Author "Mouse"
+			"rewritten":
+				"Hi!",
+			"original":
+				"hii"
+		},
+		{
+			"author": 1,
+			"rewritten":
+				"I'm good.",
+			"original":
+				"im good"
+		}
+	]
+}
