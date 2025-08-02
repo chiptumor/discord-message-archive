@@ -1,2 +1,2 @@
-# discord-message-archive
-A way to archive Discord conversations or roleplays as JSON files and display them.
+# Discord Message Archive
+### Accessible at <https://chiptumor.github.io/discord-message-archive>
