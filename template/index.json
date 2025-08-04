@@ -19,8 +19,10 @@
 	"messages": [
 		{
 			"author": 0, // Author "Chip"
-			"date": "", // Date time format for date object
-                       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+			"date": {
+				"text": "8/1/2025 9:49PM",
+				"datetime": unix
+			},
 			"rewritten": // Rewritten version of original message
 				"Hi, How are you doing?",
 			"original": // Text that appears when you hover over it
@@ -28,7 +30,10 @@
 		},
 		{
 			"author": "date", // Displayed as date stamp
-            "color": value,
+            "color": 0,
+			/* 0: Grey, 1: Blue,
+			 * 2: Green, 3: Red
+			 */
 			"content": "This is date text" // Uppercase regardless
 		}
 	]
