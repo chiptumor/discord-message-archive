@@ -19,8 +19,10 @@
 	"messages": [
 		{
 			"author": 0, // Author "Chip"
-			"date": "", // Date time format for date object
-                       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+			"timestamp": {
+				"text": "8/1/25, 10:19 PM", // Displayed next to name
+				"time": 1754043540 // Time in Unix
+			},
 			"rewritten": // Rewritten version of original message
 				"Hi, How are you doing?",
 			"original": // Text that appears when you hover over it
@@ -28,8 +30,13 @@
 		},
 		{
 			"author": "date", // Displayed as date stamp
-            "color": value,
-			"content": "This is date text" // Uppercase regardless
+            "color": 0,
+            /* 0: Grey (Default), 1: Blue,
+             * 2: Green, 3: Red,
+             * Also uses CSS color string
+             * such as "#FFFFFF" or "rgb(255,255,255)"
+             */
+			"content": "This is eventual text" // Uppercase regardless
 		}
 	]
 }
