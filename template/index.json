@@ -1,19 +1,28 @@
 {
+	"title": "My ultimate conversation",
 	"config": {
+		"type": "roleplay"
 	},
 	"user": [
-		{
-			"id": 1184619891215573042, // Include to replace @mentions
+		{ // MAXIMUM
+			"id": 1184619891215573042, // Include to properly replace @mentions; otherwise recommend replacing them manually
 			"available": true,
-			"archive": { // Info that will be displayed and used in profile cards
+			"archive": { // Info that will be used in messages and profile cards
 				"display": "Chip",
 				"username": "chiptumor",
 				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
 			},
-			"current": { // Info that will be used in profile cards
+			"current": { // Info that will be shown under profile cards
+				"display": "New Chip",
+				"username": "chiptumors_redemption",
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-current.png"
+			}
+		},
+		{ // MINIMUM
+			"archive": {
 				"display": "Chip",
 				"username": "chiptumor",
-				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-current.png"
+				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
 			}
 		}
 	],
@@ -29,10 +38,10 @@
 			"displayed": // Rewritten version of original message
 				"Hi, How are you doing? <@1204909566794403910>",
 			"original": // Text that appears when original is toggled for archive purposes
-				"hi hyd",
+				"hi hyd <@1204909566794403910>",
 			"attachment": [
 				{
-					"type": 0, // 0: Image/GIF, 1: Video, 2: Other
+					"type": "image", // image (works with gifs), video, other
 					"filename": "sans-bloodline.jpeg",
 					"url": [ // Can use multiple URLs for fallbacks
 						"https://files.catbox.moe/boc9tt.jpeg"
@@ -47,9 +56,9 @@
 		},
 		{ // DATE STAMP
 			"author": "date", // Displayed as date stamp
-            "color": 0,
-            /* 0: Grey (Default), 1: Blue,
-             * 2: Green, 3: Red,
+            "color": "default",
+            /* default (grey), secondary (blue),
+			 * confirm (green), danger (red)
              * Also uses CSS color string
              * such as "#FFFFFF" or "rgb(255,255,255)"
              */
