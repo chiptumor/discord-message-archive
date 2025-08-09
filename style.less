@@ -1,0 +1,26 @@
+body {
+	padding: 100px 10%;
+	background-color: #1a1a1e;
+	color: white;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+li {
+	&::marker {
+		content: "";
+	}
+}
+
+div#users {
+	& > ul {
+		padding: 0;
+		& > li {
+			padding: 32px 5%;
+			background-color: #121214;
+			border: 2px solid #212124;
+			border-radius: 8px;
+		}
+	}
+	span {
+		display: block;
+	}
+}

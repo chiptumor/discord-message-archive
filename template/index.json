@@ -20,7 +20,6 @@
 		},
 		{ // MINIMUM
 			"archive": {
-				"display": "Chip",
 				"username": "chiptumor",
 				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
 			}
