@@ -4,9 +4,12 @@
 		"type": "roleplay"
 	},
 	"user": [
-		{ // MAXIMUM
-			"id": 1184619891215573042, // Include to properly replace @mentions; otherwise recommend replacing them manually
-			"available": true,
+		{
+			"id": 1184619891215573042, // TODO: "Include to properly replace @mentions; otherwise recommend replacing them manually"
+			"available": {
+				"status": false,
+				"reason": "Hacked by crypto scam" // Only include if "status" is false; won't be displayed otherwise
+			},
 			"archive": { // Info that will be used in messages and profile cards
 				"display": "Chip",
 				"username": "chiptumor",
@@ -17,16 +20,10 @@
 				"username": "chiptumors_redemption",
 				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-current.png"
 			}
-		},
-		{ // MINIMUM
-			"archive": {
-				"username": "chiptumor",
-				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
-			}
 		}
 	],
 	"messages": [
-		{ // MAXIMUM
+		{ // MESSAGE
 			"author": 0, // Author "Chip"
 			"wait": 1000, // Time until 'is typing...' is triggered in (ms)
 			"typing": 1000, // Time it takes to type until message is sent (ms)
@@ -47,11 +44,6 @@
 					]
 				}
 			]
-		},
-		{ // MINIMUM
-			"author": 0,
-			"original":
-				"hi hyd"
 		},
 		{ // DATE STAMP
 			"author": "date", // Displayed as date stamp

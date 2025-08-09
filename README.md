@@ -12,6 +12,9 @@ so use a file hoster like [File Garden](<https://filegarden.com>) or [Catbox](<h
 or even your own [Github repository](<https://github.com/>)
 to get a link to your media files for attachments or profile pictures.
 
+I would also strongly suggest saving and hosting exising Discord attachments yourself instead of using the given
+links; they aren't reliable and can expire at any point in time.
+
 There will be more here when I can think of stuff to write.
 
 For now, this site is in... Alpha, I think? It's not ready in the slightest, and has a good yet to be.
