@@ -33,7 +33,7 @@
 			},
 			"displayed": // Rewritten version of original message
 				"Hi, How are you doing? <@1204909566794403910>",
-			"original": // Text that appears when original is toggled for archive purposes
+			"original": // Text that appears when "original" is toggled
 				"hi hyd <@1204909566794403910>",
 			"attachment": [
 				{
