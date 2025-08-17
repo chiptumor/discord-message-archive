@@ -1,0 +1,76 @@
+body {
+	padding: 100px 10%;
+	background-color: #1a1a1e;
+	color: white;
+	font-family: "gg sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+li {
+	list-style: none;
+}
+
+div#users {
+	width: 100%;
+	align-content: center;
+	& > ul {
+		width: 100%;
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+		padding: 0;
+		& > li {
+			padding: 32px 5%;
+			background-color: #121214;
+			border: 2px solid #212124;
+			border-radius: 8px;
+			width: max-content;
+
+			& > div.current {
+				background-color: #1a1a1e;
+				border: 2px solid #29292d;
+				border-radius: 8px;
+				padding: 32px;
+				margin-top: 20px !important;
+				grid-template-areas: "avatar display" "avatar username" "available available" !important;
+			}
+
+			& > div.archive, & > div.current {
+				display: grid;
+				grid-gap: 0 20px;
+				grid-template-areas: "avatar display" "avatar username";
+				width: fit-content;
+				margin: auto;
+
+				& > img.avatar {
+					grid-area: avatar;
+					max-width: 80px;
+					border-radius: 50%;
+				}
+				& > div.display {
+					grid-area: display;
+					display: flex;
+					align-items: flex-end;
+					font-size: 24px;
+				}
+				& > div.username {
+					grid-area: username;
+					display: flex;
+					align-items: flex-start;
+					font-size: 14px;
+				}
+				& > div.availability {
+					grid-area: available;
+					background-color: #d22d39;
+					border: 2px solid #d63d49;
+					border-radius: 8px;
+					padding: 8px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	span {
+		display: block;
+	}
+}

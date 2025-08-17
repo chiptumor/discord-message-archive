@@ -1,23 +1,29 @@
 {
+	"title": "My ultimate conversation",
 	"config": {
+		"type": "roleplay"
 	},
-	"authors": [
+	"user": [
 		{
-			"archive": { // Info that will be displayed and used in profile cards
+			"id": 1184619891215573042, // TODO: "Include to properly replace @mentions; otherwise recommend replacing them manually"
+			"available": {
+				"status": false,
+				"reason": "Hacked by crypto scam" // Only include if "status" is false; won't be displayed otherwise
+			},
+			"archive": { // Info that will be used in messages and profile cards
 				"display": "Chip",
 				"username": "chiptumor",
 				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-archive.png"
 			},
-			"available": true,
-			"current": { // Info that will be used in profile cards
-				"display": "Chip",
-				"username": "chiptumor",
+			"current": { // Info that will be shown under profile cards
+				"display": "New Chip",
+				"username": "chiptumors_redemption",
 				"avatar": "https://chiptumor.github.io/discord-convo-archive/example/chiptumor-current.png"
 			}
 		}
 	],
 	"messages": [
-		{
+		{ // MESSAGE
 			"author": 0, // Author "Chip"
 			"date": {
 				"text": "8/1/2025 9:49PM",
@@ -27,14 +33,40 @@
 				"Hi, How are you doing?",
 			"original": // Text that appears when you hover over it
 				"hi hyd"
+			"wait": 1000, // Time until 'is typing...' is triggered in (ms)
+			"typing": 1000, // Time it takes to type until message is sent (ms)
+			"timestamp": { // Time message was sent
+				"text": "8/1/25, 10:19 PM", // Displayed next to name
+				"time": 1420070805909 // Time in Unix (ms)
+			},
+			"displayed": // Rewritten version of original message
+				"Hi, How are you doing? <@1204909566794403910>",
+			"original": // Text that appears when "original" is toggled
+				"hi hyd <@1204909566794403910>",
+			"attachment": [
+				{
+					"type": "image", // image (works with gifs), video, other
+					"filename": "sans-bloodline.jpeg",
+					"url": [ // Can use multiple URLs for fallbacks
+						"https://files.catbox.moe/boc9tt.jpeg"
+					]
+				}
+			]
 		},
-		{
+		{ // DATE STAMP
 			"author": "date", // Displayed as date stamp
             "color": 0,
 			/* 0: Grey, 1: Blue,
 			 * 2: Green, 3: Red
 			 */
 			"content": "This is date text" // Uppercase regardless
+            "color": "default",
+            /* default (grey), secondary (blue),
+			 * confirm (green), danger (red)
+             * Also uses CSS color string
+             * such as "#FFFFFF" or "rgb(255,255,255)"
+             */
+			"content": "This is eventual text" // Uppercase regardless
 		}
 	]
 }

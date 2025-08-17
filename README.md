@@ -1,7 +1,22 @@
-# [Discord Message Archive][website]
+# [Discord Message Archive][DMA]
+
+This is intended to archive Discord conversations, roleplays,
+and to create custom conversations for roleplay or example purposes.
+
+**This is not intended to fake conversations or interactions!** Please do not use it for such.
+If anything goes down revolving this website and usage of it, I do not plan on being held responsible.
+I made this website mostly with interest in roleplays, but felt it could hold more information.
+
+**You will need to host most images elsewhere!** Uploading images directly isn't supported yet,
+so use a file hoster like [File Garden](<https://filegarden.com>) or [Catbox](<https://catbox.moe>)
+or even your own [Github repository](<https://github.com/>)
+to get a link to your media files for attachments or profile pictures.
+
+I would also strongly suggest saving and hosting exising Discord attachments yourself instead of using the given
+links; they aren't reliable and can expire at any point in time.
 
 There will be more here when I can think of stuff to write.
 
 For now, this site is in... Alpha, I think? It's not ready in the slightest, and has a good yet to be.
 
-[website]: https://chiptumor.github.io/discord-message-archive "Not up yet, sorry!"
+[DMA]: https://chiptumor.github.io/discord-message-archive "Not up yet, sorry!"
