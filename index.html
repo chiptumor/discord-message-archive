@@ -2,54 +2,67 @@
 <html lang="en">
 	<head>
 		<title>Discord Message Archive</title>
-
+		
 		<!-- Less-To-Css -->
 		<link rel="stylesheet/less" type="text/css" href="style.less"/>
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
-
+		
 		<!-- GG Sans -->
 		<link rel="stylesheet" type="text/css" href="font/stylesheet.css"/>
-
+		
 		<!-- Markdown -->
 		<script src="markdown.js"></script>
+		
+		<!-- Main scripts -->
+		<script src="main.js"></script>
 	</head>
 	<body>
-		<div id="users"><ul>
+		<ul id="users">
 			<li>
 				<div class="archive">
 					<div class="avatar">
-						<img src="https://chiptumor.github.io/discord-message-archive/example/chiptumor-archive.png"/>
+						<img src="https://chiptumor.github.io/discord-message-archive/template/avatar/archive.png"/>
 					</div>
 					<div class="display">
-						<span>Chip</span>
+						<span>Archived nickname</span>
 					</div>
 					<div class="username">
-						<span>chiptumor</span>
+						<span>Archived username</span>
+					</div>
+					<div class="pronouns">
+						<span>Archived pronouns</span>
+					</div>
+					<div class="bio">
+						<span>Archived about me</span>
 					</div>
 				</div>
-				<div class="current">
-					<img class="avatar" src="https://chiptumor.github.io/discord-message-archive/example/chiptumor-current.png"/>
+				<div class="recent">
+					<div class="avatar">
+						<img src="https://chiptumor.github.io/discord-message-archive/template/avatar/recent.png"/>
+					</div>
 					<div class="display">
-						<span>New Chip</span>
+						<span>Current nickname</span>
 					</div>
 					<div class="username">
-						<span>chiptumors_revolution</span>
+						<span>Current username</span>
+					</div>
+					<div class="pronouns">
+						<span>Current pronouns</span>
+					</div>
+					<div class="bio">
+						<span>Current about me</span>
 					</div>
 
 					<div class="availability">
-						<span>This user is now unavailable:</span>
-						<span class="reason">Hacked by crypto scam</span>
+						<span class="reason">Reason for unavailability</span>
 					</div>
 				</div>
 			</li>
-		</ul></div>
+		</ul>
 		
-		<div id="messages"><ul>
-			<li>
-
-			</li>
-		</ul></div>
+		<ul id="content">
+			
+		</ul>
 		
-		<script src="main.js"></script>
 	</body>
 </html>
