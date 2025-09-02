@@ -46,13 +46,15 @@
 						text: "Date displayed",
 						time: -1
 					},
-					attachment: {
-						type: 0,
-						filename: "filename.ext",
-						url: [
-							"https://url.to/file"
-						]
-					},
+					attachment: [
+						{
+							type: 0,
+							filename: "filename.ext",
+							url: [
+								"http://url-to-file"
+							]
+						}
+					],
 					animation: {
 						wait: -1,
 						type: -1
