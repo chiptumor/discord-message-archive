@@ -1,14 +1,14 @@
 {
-	"title": "My ultimate conversation",
-	"config": {
+	"title": "My ultimate conversation", // Optional
+	"config": { // Optional, as well as each key within
 		"type": "roleplay"
 	},
 	"user": [
-		{
+		{ // 0
 			"id": 1184619891215573042, // TODO: "Include to properly replace @mentions; otherwise recommend replacing them manually"
 			"available": {
-				"status": false,
-				"reason": "Hacked by crypto scam" // Only include if "status" is false; won't be displayed otherwise
+				"status": false, // Boolean
+				"reason": "Hacked by crypto scam" // String; Only include if "status" is false; won't be displayed otherwise
 			},
 			"archive": { // Info that will be used in messages and profile cards
 				"display": "Chip",
@@ -29,28 +29,30 @@
 				"text": "8/1/2025 9:49PM",
 				"datetime": unix
 			},
-			"rewritten": // Rewritten version of original message
-				"Hi, How are you doing?",
-			"original": // Text that appears when you hover over it
-				"hi hyd"
-			"wait": 1000, // Time until 'is typing...' is triggered in (ms)
-			"typing": 1000, // Time it takes to type until message is sent (ms)
-			"timestamp": { // Time message was sent
-				"text": "8/1/25, 10:19 PM", // Displayed next to name
-				"time": 1420070805909 // Time in Unix (ms)
-			},
-			"displayed": // Rewritten version of original message
-				"Hi, How are you doing? <@1204909566794403910>",
-			"original": // Text that appears when "original" is toggled
-				"hi hyd <@1204909566794403910>",
-			"attachment": [
-				{
-					"type": "image", // image (works with gifs), video, other
-					"filename": "sans-bloodline.jpeg",
-					"url": [ // Can use multiple URLs for fallbacks
-						"https://files.catbox.moe/boc9tt.jpeg"
-					]
-				}
+			"messages": [
+				"rewritten": // Rewritten version of original message
+					"Hi, How are you doing?",
+				"original": // Text that appears when you hover over it
+					"hi hyd",
+				"wait": 1000, // Time until 'is typing...' is triggered in (ms)
+				"typing": 1000, // Time it takes to type until message is sent (ms)
+				"timestamp": { // Time message was sent
+					"text": "8/1/25, 10:19 PM", // Displayed next to name
+					"time": 1420070805909 // Time in Unix (ms)
+				},
+				"displayed": // Rewritten version of original message
+					"Hi, How are you doing? <@1204909566794403910>",
+				"original": // Text that appears when "original" is toggled
+					"hi hyd <@1204909566794403910>",
+				"attachment": [
+					{
+						"type": "image", // image (works with gifs), video, other
+						"filename": "sans-bloodline.jpeg",
+						"url": [ // Can use multiple URLs for fallbacks
+							"https://files.catbox.moe/boc9tt.jpeg"
+						]
+					}
+				]
 			]
 		},
 		{ // DATE STAMP
