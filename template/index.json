@@ -10,6 +10,7 @@
 				reason: "Reason for unavailability"
 			},
 			archive: {
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png",
 				user: "Archived username",
 				display: "Archived nickname",
 				pronouns: "Archived pronouns",
@@ -22,6 +23,7 @@
 				]
 			},
 			recent: {
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/recent.png",
 				user: "Current username",
 				display: "Current nickname",
 				pronouns: "Current pronouns",
@@ -53,8 +55,8 @@
 							filename: "filename.ext",
 							size: "File size",
 							url: [
-								"https://chiptumor.github.io/discord-message-archive/template/file/main-file.ext",
-								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-file.ext"
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/main-file.ext",
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/fallback-file.ext"
 							]
 						},
 						{
@@ -62,8 +64,8 @@
 							filename: "image.png",
 							size: "File size",
 							url: [
-								"https://chiptumor.github.io/discord-message-archive/template/file/main-image.png",
-								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-image.png"
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/main-image.png",
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/fallback-image.png"
 							]
 						},
 						{
@@ -71,8 +73,8 @@
 							filename: "video.mp4",
 							size: "File size",
 							url: [
-								"https://chiptumor.github.io/discord-message-archive/template/file/main-video.mp4",
-								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-video.mp4"
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/main-video.mp4",
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/fallback-video.mp4"
 							]
 						},
 						{
@@ -80,8 +82,8 @@
 							filename: "audio.mp3",
 							size: "File size",
 							url: [
-								"https://chiptumor.github.io/discord-message-archive/template/file/main-audio.mp3",
-								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-audio.mp3"
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/main-audio.mp3",
+								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/fallback-audio.mp3"
 							]
 						}
 					],
