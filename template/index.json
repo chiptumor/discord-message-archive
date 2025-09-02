@@ -4,32 +4,32 @@
 	},
 	user: [
 		{
-			id: -1,
+			id: 0,
 			available: {
 				status: false,
 				reason: "Reason for unavailability"
 			},
 			archive: {
-				user: "Username",
-				display: "Nickname",
-				pronouns: "Pronouns",
-				bio: "About me",
+				user: "Archived username",
+				display: "Archived nickname",
+				pronouns: "Archived pronouns",
+				bio: "Archived about me",
 				roles: [
 					{
-						name: "Name of role",
+						name: "Archived name of role",
 						color: "#123DEF"
 					}
 				]
 			},
 			recent: {
-				user: "Username",
-				display: "Nickname",
-				pronouns: "Pronouns",
-				bio: "About me",
+				user: "Current username",
+				display: "Current nickname",
+				pronouns: "Current pronouns",
+				bio: "Current about me",
 				roles: [
 					{
-						name: "Name of role",
-						color: "#123DEF"
+						name: "Current name of role",
+						color: "#789ABC"
 					}
 				]
 			}
@@ -43,33 +43,63 @@
 					displayed: "Displayed message",
 					original: "Original message",
 					timestamp: {
-						text: "Date displayed",
-						time: -1
+						short: "Short date",
+						long: "Long date",
+						time: 0
 					},
 					attachment: [
 						{
 							type: 0,
 							filename: "filename.ext",
+							size: "File size",
 							url: [
-								"http://url-to-file"
+								"https://chiptumor.github.io/discord-message-archive/template/file/main-file.ext",
+								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-file.ext"
+							]
+						},
+						{
+							type: 1,
+							filename: "image.png",
+							size: "File size",
+							url: [
+								"https://chiptumor.github.io/discord-message-archive/template/file/main-image.png",
+								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-image.png"
+							]
+						},
+						{
+							type: 2,
+							filename: "video.mp4",
+							size: "File size",
+							url: [
+								"https://chiptumor.github.io/discord-message-archive/template/file/main-video.mp4",
+								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-video.mp4"
+							]
+						},
+						{
+							type: 3,
+							filename: "audio.mp3",
+							size: "File size",
+							url: [
+								"https://chiptumor.github.io/discord-message-archive/template/file/main-audio.mp3",
+								"https://chiptumor.github.io/discord-message-archive/template/file/fallback-audio.mp3"
 							]
 						}
 					],
 					animation: {
-						wait: -1,
-						type: -1
+						wait: 0,
+						type: 0
 					}
 				}
 			]
 		},
 		{
 			author: "date",
-			color: -1,
+			color: 0,
 			content: "Datestamp text"
 		},
 		{
 			author: "flag",
-			color: -1,
+			color: 0,
 			content: "Flag text"
 		}
 	]
