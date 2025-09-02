@@ -25,6 +25,14 @@
 	"messages": [
 		{ // MESSAGE
 			"author": 0, // Author "Chip"
+			"date": {
+				"text": "8/1/2025 9:49PM",
+				"datetime": unix
+			},
+			"rewritten": // Rewritten version of original message
+				"Hi, How are you doing?",
+			"original": // Text that appears when you hover over it
+				"hi hyd"
 			"wait": 1000, // Time until 'is typing...' is triggered in (ms)
 			"typing": 1000, // Time it takes to type until message is sent (ms)
 			"timestamp": { // Time message was sent
@@ -47,6 +55,11 @@
 		},
 		{ // DATE STAMP
 			"author": "date", // Displayed as date stamp
+            "color": 0,
+			/* 0: Grey, 1: Blue,
+			 * 2: Green, 3: Red
+			 */
+			"content": "This is date text" // Uppercase regardless
             "color": "default",
             /* default (grey), secondary (blue),
 			 * confirm (green), danger (red)
