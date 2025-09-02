@@ -63,7 +63,12 @@
 		{
 			author: "date",
 			color: -1,
-			content: "Date text"
+			content: "Datestamp text"
+		},
+		{
+			author: "flag",
+			color: -1,
+			content: "Flag text"
 		}
 	]
 }
