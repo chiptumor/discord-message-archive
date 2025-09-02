@@ -1,3 +1,6 @@
+// https://github.com/peerigon/markdown-loader
+// https://github.com/ariabuckles/simple-markdown
+
 /* I had this written by AI. I deeply apologize.
  * If you feel like using this, feel free; don't
  * worry about credits or anything. Delete as you
