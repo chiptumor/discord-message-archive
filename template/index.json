@@ -40,10 +40,30 @@
 			author: 0,
 			messages: [
 				{
-					rewritten: "Rewritten message",
-					original: "Original message"
+					displayed: "Displayed message",
+					original: "Original message",
+					timestamp: {
+						text: "Date displayed",
+						time: -1
+					},
+					attachment: {
+						type: 0,
+						filename: "filename.ext",
+						url: [
+							"https://url.to/file"
+						]
+					},
+					animation: {
+						wait: -1,
+						type: -1
+					}
 				}
 			]
+		},
+		{
+			author: "date",
+			color: -1,
+			content: "Date text"
 		}
 	]
 }
