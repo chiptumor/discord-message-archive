@@ -1,0 +1,49 @@
+{
+	title: "Title of archive",
+	config: {
+	},
+	user: [
+		{
+			id: -1,
+			available: {
+				status: false,
+				reason: "Reason for unavailability"
+			},
+			archive: {
+				user: "Username",
+				display: "Nickname",
+				pronouns: "Pronouns",
+				bio: "About me",
+				roles: [
+					{
+						name: "Name of role",
+						color: "#123DEF"
+					}
+				]
+			},
+			recent: {
+				user: "Username",
+				display: "Nickname",
+				pronouns: "Pronouns",
+				bio: "About me",
+				roles: [
+					{
+						name: "Name of role",
+						color: "#123DEF"
+					}
+				]
+			}
+		}
+	],
+	content: [
+		{
+			author: 0,
+			messages: [
+				{
+					rewritten: "Rewritten message",
+					original: "Original message"
+				}
+			]
+		}
+	]
+}
