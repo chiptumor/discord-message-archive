@@ -39,9 +39,22 @@
 	],
 	content: [
 		{
+			id: 0,
+			reply: false,
 			author: 0,
 			messages: [
 				{
+					highlight: 0,
+					displayed: "Displayed message",
+					original: "Original message",
+					timestamp: {
+						short: "Short date",
+						long: "Long date",
+						time: 0
+					}
+				},
+				{
+					highlight: 1,
 					displayed: "Displayed message",
 					original: "Original message",
 					timestamp: {
