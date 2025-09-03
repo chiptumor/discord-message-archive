@@ -152,15 +152,30 @@
 					},
 					attachment: [
 					// Defines attachments in message
+					// Ignore if falsey
 						{
 							type: 0,
-							filename: "filename.ext",
+							// Determines the type of file presented
+							// Default is 0
+							/* LEGEND:
+							 * 0 Generic
+							 * 1 Image
+							 * 2 Video
+							 * 3 Audio */
+							name: "filename.ext",
+							// Displays if generic file or audio
+							// Fallback to filename from retrieved file if falsey
 							size: "File size",
+							// Displays under filename if generic or audio
+							// Fallback to file size from retrieved file if falsey
 							url: [
+							// URL to use for attachment
+							// Multiple allowed for use as fallbacks
 								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/main-file.ext",
 								"https://chiptumor.github.io/discord-message-archive/template/file/attachment/fallback-file.ext"
 							]
 						},
+						/// FURTHER ATTACHMENTS FOR STYLE TESTING; IGNORE (
 						{
 							type: 1,
 							filename: "image.png",
@@ -189,6 +204,7 @@
 							]
 						}
 					],
+					// )
 					animation: {
 						wait: 0,
 						type: 0
