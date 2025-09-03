@@ -84,7 +84,7 @@
 	// Defines conversation to be displayed
 		{
 			type: 0, // MEANS MESSAGE
-			// Determines how this content is displayed
+			// Determines how conversation entry is displayed
 			// Default is 0
 			reply: {
 			// Displays message being replied to
@@ -218,9 +218,26 @@
 				}
 			]
 		},
+		/** SYSTEM MESSAGES ( **/
 		{
 			type: 1, // MEANS SYSTEM MESSAGE
+			context: 0, // MEANS JOINED CONVERSATION
+			// Defines how to handle further content
+			
 		},
+		{
+			type: 1, // MEANS SYSTEM MESSAGE
+			context: 1 // MEANS LEFT CONVERSATION
+		},
+		{
+			type: 1, // MEANS SYSTEM MESSAGE
+			context: 2 // MEANS SERVER BOOST
+		},
+		{
+			type: 1, // MEANS SYSTEM MESSAGE
+			context: 3 // MEANS MESSAGE PIN
+		},
+		/** ) **/
 		{
 			type: 2, // MEANS DATESTAMP
 			color: 0,
