@@ -9,25 +9,20 @@
 	},
 	user: [
 	// Defines users to be displayed in the users section and conversation
-	// Mandatory for every user involved
+	// Ignore if null
 		{
 			reference: "user",
 			// Utilized in user specifications for better readability
-			// Default is index position
+			// Default is stringified index position
 			id: 123,
 			// Utilized in message contents replace mentions with the nickname of the user under the ID
 			// Example: "<@123>" is replaced with "@Archived nickname"
-			available: {
-				status: false,
-				// Determines if the user should have an unavailability warning
-				reason: "Reason for unavailability"
-				// Determines the reason specified for unavailability
-				// Ignore if falsey or if 'status' is true
-			},
+			bot: false,
+			// 
 			archive: {
-			// Data to be used in author displays in users section and over messages
-			// Use defaults if falsey
-				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png",
+				// Data to be used in author displays in users section and over messages
+				// Use defaults if falsey
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/user/archive.png",
 				// Default is "https://cdn.discordapp.com/embed/avatars/0.png"
 				user: "Archived username",
 				// Default is "???"
@@ -37,23 +32,34 @@
 				// Ignore if falsey
 				bio: "Archived about me",
 				// Ignore if falsey
-				roles: [
-				// Ignore if falsey
-					{
-						name: "Archived name of role",
-						// Mandatory
-						color: "#123DEF"
-						// Default is "#99ABB4" (TODO)
-					}
-				]
+				roles: {
+				// Use defaults if falsey
+					preview: {
+						icon: "https://chiptumor.github.io/discord-message-archive/template/file/user/role-preview.png",
+						// Ignore if falsey
+						color: "#456789"
+						// Default is "#FFFFFF"
+					},
+					list: [
+					// Ignore if falsey
+						{
+							name: "Archived name of role",
+							// Mandatory
+							icon: "https://chiptumor.github.io/discord-message-archive/template/file/user/role-archive.png",
+							// Ignore if falsey
+							color: "#123DEF"
+							// Default is "#99ABB4" (TODO)
+						}
+					]
+				}
 			},
 			recent: {
-			// Data to be displayed under archived info
-			// Ignore if null
+				// Data to be displayed under archived info
+				// Ignore if null
 				/* FOR EACH KEY:
 				 * Inherit from (..).archive if true
 				 * Ignore if null or false */
-				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/recent.png",
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/user/recent.png",
 				user: "Current username",
 				display: "Current nickname",
 				pronouns: "Current pronouns",
@@ -64,6 +70,13 @@
 						color: "#789ABC"
 					}
 				]
+			},
+			available: {
+				status: false,
+				// Determines if the user should have an unavailability warning
+				reason: "Reason for unavailability"
+				// Determines the reason specified for unavailability
+				// Ignore if falsey or if 'status' is true
 			}
 		}
 	],
@@ -75,37 +88,70 @@
 			// Default is 0
 			reply: {
 			// Displays message being replied to
-			// Inherit from message ID map if number
-			// Ignore if null
-			/* FOR EACH KEY:
-			 * Inherit from (TODO)
-			 * */
-				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png"
+			// Inherit from message ID if number
+			// Ignore if falsey
+				deleted: false,
+				// Determines whether reply is deleted
+				// Default is false
+				id: 234,
+				// Determines what message ID to jump to when clicked
+				// Ignore if falsey
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/reply.png",
+				// Inherit from referenced user or use as URL if string
+				// Inherit from user at index or message ID or user ID if number
+				// "https://cdn.discordapp.com/embed/avatars/0.png" if falsey and deleted is true
+				// Ignore if falsey
+				alias: "chiptumor",
+				// Inherit from referenced user or use as text if string
+				// Inherit from user at index or message ID or user ID if number
+				// Ignore if falsey
+				displayed: "Displayed reply",
+				// Use as text if string
+				// Inherit from message ID if number
+				// Ignore if falsey
+				original: "Original reply"
+				// Use as text if string
+				// Inherit from message ID if number
+				// "*Deleted message*" if falsey and deleted is true
+				// Ignore if falsey
 			},
 			author: "user",
+			// Inherit from referenced user if string
+			// Inherit from user at index or user ID if number
+			// Can be set directly as user object except reference key
 			messages: [
+			// Collection of messages to be displayed in message group
 				{
 					id: 456,
+					// Utilized in replies
+					// Ignore if falsey
 					highlight: 0,
+					// Determines how the message should be highlighted
+					// Default is 0
+					/* LEGEND:
+					 * 0 none
+					 * 1 mention
+					 * 2 ephemeral
+					 * 3 danger
+					 * 4 failure */
 					displayed: "Displayed message",
+					// Message to be displayed by default
+					// Ignore if falsey
 					original: "Original message",
+					// Message to be displayed when original text is requested
 					timestamp: {
 						short: "Short date",
+						// Date to be displayed besides username (first message) or to left of hovered messages
+						// Ignore if falsey
 						long: "Long date",
+						// Date to be displayed when short dates are hovered over
+						// Ignore if falsey
 						time: 0
-					}
-				},
-				{
-					id: 457,
-					highlight: 1,
-					displayed: "Displayed message",
-					original: "Original message",
-					timestamp: {
-						short: "Short date",
-						long: "Long date",
-						time: 0
+						// Snowflake time of message to display when requested
+						// Ignore if falsey
 					},
 					attachment: [
+					// Defines attachments in message
 						{
 							type: 0,
 							filename: "filename.ext",
