@@ -1,40 +1,58 @@
 {
 	title: "Title of archive",
 	// Sets the title of the page
-	// Default: "Discord Message Archive"
+	// Default is "Discord Message Archive"
 	config: {
 	// Customizes aspects of the archive or display
-	// If null, use defaults
+	// Use defaults if falsey
+	/// Currently not in use!
 	},
 	user: [
 	// Defines users to be displayed in the users section and conversation
 	// Mandatory for every user involved
 		{
+			reference: "user",
+			// Utilized in user specifications for better readability
+			// Default is index position
 			id: 123,
-			// Utilized to replace mentions with the nickname of the user under the ID
+			// Utilized in message contents replace mentions with the nickname of the user under the ID
 			// Example: "<@123>" is replaced with "@Archived nickname"
 			available: {
 				status: false,
 				// Determines if the user should have an unavailability warning
 				reason: "Reason for unavailability"
 				// Determines the reason specified for unavailability
-				// Ignore if null or 'status' is true
+				// Ignore if falsey or if 'status' is true
 			},
 			archive: {
-				// Data to be used in author displays in users section and over messages
+			// Data to be used in author displays in users section and over messages
+			// Use defaults if falsey
 				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png",
+				// Default is "https://cdn.discordapp.com/embed/avatars/0.png"
 				user: "Archived username",
+				// Default is "???"
 				display: "Archived nickname",
+				// Default is user
 				pronouns: "Archived pronouns",
+				// Ignore if falsey
 				bio: "Archived about me",
+				// Ignore if falsey
 				roles: [
+				// Ignore if falsey
 					{
 						name: "Archived name of role",
+						// Mandatory
 						color: "#123DEF"
+						// Default is "#99ABB4" (TODO)
 					}
 				]
 			},
 			recent: {
+			// Data to be displayed under archived info
+			// Ignore if null
+				/* FOR EACH KEY:
+				 * Inherit from (..).archive if true
+				 * Ignore if null or false */
 				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/recent.png",
 				user: "Current username",
 				display: "Current nickname",
@@ -50,9 +68,21 @@
 		}
 	],
 	content: [
+	// Defines conversation to be displayed
 		{
-			reply: null,
-			author: 0,
+			type: 0, // MEANS MESSAGE
+			// Determines how this content is displayed
+			// Default is 0
+			reply: {
+			// Displays message being replied to
+			// Inherit from message ID map if number
+			// Ignore if null
+			/* FOR EACH KEY:
+			 * Inherit from (TODO)
+			 * */
+				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png"
+			},
+			author: "user",
 			messages: [
 				{
 					id: 456,
