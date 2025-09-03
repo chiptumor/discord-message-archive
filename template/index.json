@@ -206,21 +206,36 @@
 					],
 					// )
 					animation: {
+					// Events to play for this message when animation is played
+					/// Not currently handled!
 						wait: 0,
+						// Amount of time before typing animation is triggered
+						// Default is 0
 						type: 0
+						// Amount of time that the user seemingly takes to type before this message is sent
+						// Default is 0
 					}
 				}
 			]
 		},
 		{
-			author: "date",
+			type: 1, // MEANS SYSTEM MESSAGE
+		},
+		{
+			type: 2, // MEANS DATESTAMP
 			color: 0,
 			content: "Datestamp text"
 		},
 		{
-			author: "flag",
+			type: 3, // MEANS FLAG
 			color: 0,
 			content: "Flag text"
+		},
+		{
+			type: 4, // MEANS HIDDEN MESSAGES
+		},
+		{
+			type: 5, // MEANS COMMENT
 		}
 	]
 }
