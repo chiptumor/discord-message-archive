@@ -1,15 +1,27 @@
 {
 	title: "Title of archive",
+	// Sets the title of the page
+	// Default: "Discord Message Archive"
 	config: {
+	// Customizes aspects of the archive or display
+	// If null, use defaults
 	},
 	user: [
+	// Defines users to be displayed in the users section and conversation
+	// Mandatory for every user involved
 		{
-			id: 0,
+			id: 123,
+			// Utilized to replace mentions with the nickname of the user under the ID
+			// Example: "<@123>" is replaced with "@Archived nickname"
 			available: {
 				status: false,
+				// Determines if the user should have an unavailability warning
 				reason: "Reason for unavailability"
+				// Determines the reason specified for unavailability
+				// Ignore if null or 'status' is true
 			},
 			archive: {
+				// Data to be used in author displays in users section and over messages
 				avatar: "https://chiptumor.github.io/discord-message-archive/template/file/avatar/archive.png",
 				user: "Archived username",
 				display: "Archived nickname",
@@ -39,11 +51,11 @@
 	],
 	content: [
 		{
-			id: 0,
-			reply: false,
+			reply: null,
 			author: 0,
 			messages: [
 				{
+					id: 456,
 					highlight: 0,
 					displayed: "Displayed message",
 					original: "Original message",
@@ -54,6 +66,7 @@
 					}
 				},
 				{
+					id: 457,
 					highlight: 1,
 					displayed: "Displayed message",
 					original: "Original message",
